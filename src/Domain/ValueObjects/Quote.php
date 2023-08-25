@@ -1,6 +1,6 @@
 <?php
 
-namespace Jcrucesadrados\Inspire\ValueObjects;
+namespace Jcrucesadrados\Inspire\Domain\ValueObjects;
 
 use InvalidArgumentException;
 
