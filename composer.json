@@ -1,0 +1,18 @@
+{
+    "name": "jcrucesadrados/inspire",
+    "description": "This is a package to learn how to develop Laravel Packages",
+    "autoload": {
+        "psr-4": {
+            "Jcrucesadrados\\Inspire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joaquin Cruces Adrados",
+            "email": "jcrucesadrados@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1"
+    }
+}
