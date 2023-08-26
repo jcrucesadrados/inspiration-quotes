@@ -9,7 +9,7 @@ class InspireService {
     {
     }
 
-    public function justDoIt(): string
+    public function getSingleQuote(): string
     {
         $quote = $this->inspireQuoteRepository->getSingleQuote();
 

@@ -2,6 +2,7 @@
 
 namespace Jcrucesadrados\Inspire\Infrastructure\Repositories;
 
+use Arr;
 use Illuminate\Support\Facades\Http;
 use Jcrucesadrados\Inspire\Domain\Repositories\InspireQuoteRepository;
 use Jcrucesadrados\Inspire\Domain\ValueObjects\Quote;

@@ -8,6 +8,6 @@ class InspirationController
 {
     public function __invoke(InspireService $inspire): string
     {
-        return $inspire->justDoIt();
+        return $inspire->getSingleQuote();
     }
 }
