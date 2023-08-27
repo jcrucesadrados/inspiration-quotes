@@ -3,7 +3,8 @@
     "description": "This is a package to learn how to develop Laravel Packages",
     "autoload": {
         "psr-4": {
-            "Jcrucesadrados\\Inspire\\": "src/"
+            "Jcrucesadrados\\Inspire\\": "src/",
+            "Jcrucesadrados\\Inspire\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -14,5 +15,16 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^7.0.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.9",
+        "phpunit/phpunit": "^10.3"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jcrucesadrados\\Inspire\\Infrastructure\\InspirationServiceProvider"
+            ]
+        }
     }
 }

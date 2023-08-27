@@ -1,6 +1,6 @@
 <?php
 
-namespace Jcrucesadrados\Inspire\ValueObjects;
+namespace Jcrucesadrados\Inspire\Domain\ValueObjects;
 
 use InvalidArgumentException;
 
@@ -22,7 +22,7 @@ readonly class Quote
 
     private static function guardRequiredFields(array $data): void
     {
-        if (! empty($missingFields = array_diff(array_keys($data), self::ARRAY_REQUIRED_FIELDS))) {
+        if (! empty($missingFields = array_diff(self::ARRAY_REQUIRED_FIELDS, array_keys($data)))) {
             throw new InvalidArgumentException(
                 sprintf('Required fields missing. %s are required', implode(', ', $missingFields)),
             );
