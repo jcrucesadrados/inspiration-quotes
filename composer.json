@@ -1,6 +1,7 @@
 {
     "name": "jcrucesadrados/inspire",
     "description": "This is a package to learn how to develop Laravel Packages",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Jcrucesadrados\\Inspire\\": "src/",
