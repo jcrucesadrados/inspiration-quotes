@@ -22,7 +22,8 @@
         "phpunit/phpunit": "^10.3",
         "phpstan/phpstan": "^1.10",
         "nunomaduro/larastan": "^2.6",
-        "phpstan/phpstan-mockery": "^1.1"
+        "phpstan/phpstan-mockery": "^1.1",
+        "laravel/pint": "^1.11"
     },
     "scripts": {
         "php-stan": "vendor/bin/phpstan analyse",
