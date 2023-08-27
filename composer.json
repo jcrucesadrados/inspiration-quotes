@@ -24,10 +24,24 @@
         "nunomaduro/larastan": "^2.6",
         "phpstan/phpstan-mockery": "^1.1"
     },
+    "scripts": {
+        "php-stan": "vendor/bin/phpstan analyse",
+        "unit-test": "vendor/bin/phpunit --testsuite=Unit",
+        "integration-test": "vendor/bin/phpunit --testsuite=Integration",
+        "full-test-suite": "vendor/bin/phpunit"
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Jcrucesadrados\\Inspire\\Infrastructure\\InspirationServiceProvider"
+            ]
+        },
+        "hooks": {
+            "pre-commit": [
+            ],
+            "pre-push": [
+                "composer php-stan",
+                "composer unit-test"
             ]
         }
     }
