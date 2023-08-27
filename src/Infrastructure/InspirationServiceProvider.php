@@ -12,7 +12,7 @@ class InspirationServiceProvider extends ServiceProvider
         InspireQuoteRepository::class => TypeFitInspireRepository::class,
     ];
 
-    public function boot()
+    public function boot(): void
     {
         $this->loadRoutesFrom(__DIR__ . '/../Infrastructure/Routes/InspireRoutes.php');
     }

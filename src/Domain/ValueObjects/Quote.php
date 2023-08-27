@@ -11,12 +11,13 @@ readonly class Quote
     private function __construct(
         public string $text,
         public string $author,
-    ){
+    ) {
     }
 
     public static function fromArray(array $quote): self
     {
         self::guardRequiredFields($quote);
+
         return new self($quote['text'], $quote['author']);
     }
 

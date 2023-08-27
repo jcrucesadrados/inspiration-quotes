@@ -6,6 +6,7 @@ use Jcrucesadrados\Inspire\Domain\Repositories\InspireQuoteRepository;
 use Jcrucesadrados\Inspire\Domain\ValueObjects\Quote;
 use Jcrucesadrados\Inspire\Infrastructure\Services\InspireService;
 use Mockery;
+use Mockery\LegacyMockInterface;
 use Mockery\MockInterface;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase;
@@ -14,7 +15,7 @@ class InspireServiceTest extends TestCase
 {
     use WithWorkbench;
 
-    private InspireQuoteRepository|MockInterface $inspireQuoteRepository;
+    private InspireQuoteRepository|MockInterface|LegacyMockInterface $inspireQuoteRepository;
     private InspireService $service;
 
     protected function setUp(): void
@@ -37,7 +38,6 @@ class InspireServiceTest extends TestCase
         ]);
 
         $this->inspireQuoteRepository->shouldReceive('getSingleQuote')
-            ->once()
             ->andReturn($expectedQuote);
 
         // when

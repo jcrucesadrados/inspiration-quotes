@@ -4,7 +4,8 @@ namespace Jcrucesadrados\Inspire\Infrastructure\Services;
 
 use Jcrucesadrados\Inspire\Domain\Repositories\InspireQuoteRepository;
 
-class InspireService {
+class InspireService
+{
     public function __construct(private InspireQuoteRepository $inspireQuoteRepository)
     {
     }
