@@ -9,7 +9,6 @@ use Jcrucesadrados\Inspire\Domain\ValueObjects\Quote;
 
 class TypeFitInspireRepository implements InspireQuoteRepository
 {
-
     public function getSingleQuote(): Quote
     {
         $response = Http::get('https://type.fit/api/quotes');
