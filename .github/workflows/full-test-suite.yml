@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   tests:
-    name: Run all tests
+    name: Tests & pre-merge actions
     runs-on: ubuntu-latest
 
     steps:
@@ -36,4 +36,7 @@ jobs:
         run: composer install --prefer-dist --no-progress
 
       - name: Execute all test
-        run: vendor/bin/phpunit
+        run: composer full-test-suite
+
+      - name: Execute PHPStan Checks
+        run: composer php-stan
